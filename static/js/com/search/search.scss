@@ -41,7 +41,7 @@ body._no-scroll {
   min-width: 100%;
   z-index: 9000;
   opacity: 1;
-  transition: 0.3s;
+  transition: opacity 0.3s;
 
   &._hidden {
     opacity: 0;
@@ -215,19 +215,23 @@ body._no-scroll {
   }
 
   @media (max-width: $breakpoint-xs) {
-    & .search-result {
+    .search-popup__content {
+      margin-top: 64px;
+    }
+
+    .search-result {
       flex-direction: column;
     }
 
-    & .ais-SearchBox-input {
+    .ais-SearchBox-input {
       font-size: 32px;
     }
 
-    & .search-result__delimiter {
+    .search-result__delimiter {
       display: none;
     }
 
-    & .search-result__title {
+    .search-result__title {
       margin-top: 8px;
     }
   }

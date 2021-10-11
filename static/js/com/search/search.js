@@ -30,7 +30,7 @@ export function openPopup() {
 
   $searchPopup.removeClass('_hidden');
   $('body').addClass('_no-scroll');
-  $('.ais-SearchBox-input').focus();
+  setTimeout(() => $('.ais-SearchBox-input').focus(), 350);
 }
 
 export function initSearch() {
@@ -99,13 +99,10 @@ export function initSearch() {
     $('.ais-InfiniteHits-item:first').addClass('_active')
   });
 
-  const $input = $('.ais-SearchBox-input');
-
   function closePopup() {
-    search.helper.setQuery('').clearRefinements().search();
+    search.helper.setState({focused: false, query: undefined});
     $('body').removeClass('_no-scroll');
     $searchPopup.addClass('_hidden');
-    $input.val('');
   }
 
   $searchPopup.keyup(function (e) {
