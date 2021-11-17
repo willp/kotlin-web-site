@@ -1,10 +1,5 @@
 [//]: # (title: Compatibility guide for Kotlin 1.6)
 
-> This page describes changes that will happen in the upcoming version 1.6.0. It isn't released yet. You can try
-> its preview version [1.6.0-RC](eap.md#build-details).
->
-{type="note"}
-
 _[Keeping the Language Modern](kotlin-evolution.md)_ and _[Comfortable Updates](kotlin-evolution.md)_ are among the fundamental principles in
 Kotlin Language Design. The former says that constructs which obstruct language evolution should be removed, and the
 latter says that this removal should be well-communicated beforehand to make code migration as smooth as possible.
@@ -252,8 +247,8 @@ perspective
 > **Deprecation cycle**:
 >
 > - < 1.6: the old behavior: the argument is converted to set in some cases
-> - 1.6.0: if the function argument is a collection, it's no longer converted to `Set`. If it's not a collection, it can be converted to `List` instead.
->   The old behavior can be temporarily turned back on JVM by setting the system property `kotlin.collections.convert_arg_to_set_in_removeAll=true`
+> - 1.6.0: if the function argument is a collection, it's no longer converted to `Set`. If it's not a collection, it can be converted to `List` instead.  
+> The old behavior can be temporarily turned back on JVM by setting the system property `kotlin.collections.convert_arg_to_set_in_removeAll=true`
 > - \>= 1.7: the system property above will no longer have an effect
 
 ### Change value generation algorithm in `Random.nextLong`
